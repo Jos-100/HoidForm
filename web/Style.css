@@ -20,3 +20,10 @@ a {
     background: aliceblue;
     align-content: center;
 }
+
+.title {
+    background: sandybrown;
+    font-family: Arial, animation-delay:tailwind;
+    font-size: 21px;
+    align-content: center;
+}
