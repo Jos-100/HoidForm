@@ -15,11 +15,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="Style.css" type="text/css">
+        <link rel="stylesheet" href="main.css" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 class="p-3 mb-2 bg-info text-dark">Tabla de Datos</h1>
+        <div class="container-fluid">
+            <h1 class="p-3 mb-2 bg-info text-dark">Tabla de Datos</h1>
+        </div>
         <%
             int i = 0;
             List<Datos> lista = null;
@@ -41,10 +43,12 @@
                 lista.remove( Integer.parseInt(id) );
             }
         %>
-        <a href="jsp1.jsp">Regresar a jsp1</a>
-        <br><br>
-        <a href="jsp3.jsp">Ir a jsp3</a>
-        <br><br>
+        <div class="container-fluid">
+            <a href="jsp1.jsp">Regresar a Números aleatorios</a>
+            <br><br>
+            <a href="jsp3.jsp">Ir al formulario</a>
+            <br><br>
+        </div>
         <table class="table table-hover">
              <thead class="table-dark">
             <tr>

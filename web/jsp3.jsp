@@ -15,11 +15,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="Style.css" type="text/css">
+        <link rel="stylesheet" href="main.css" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 class="p-3 mb-2 bg-info text-dark">Formulario</h1>
+        <div class="container-fluid">
+            <h1 class="p-3 mb-2 bg-info text-dark">Formulario</h1>
+            <br><br>
+        </div>
         <%
             String nombre = null;
             String calificacion = null;
@@ -96,11 +99,20 @@
                     lista.add( datos );
                 }
         %>
-                <h1>EXITO!</h1>
+             <div class="container-fluid">   
+                 <h4>Todo se ha enviado correctamente</h4>
+                 <br><br>
+            </div>
                 <script>
                     console.log("Todo se envió correctamente");
                 </script>
-                <a href="jsp2.jsp">Ir a jsp2 </a>
+            <div class="container-fluid">    
+                <a href="jsp1.jsp">Ir a Numeros Aleatorios </a>
+                <br><br>
+                <a href="jsp2.jsp">Ir a Tabla de Datos </a>
+                <br><br>
+                <a href="jsp3.jsp">Ir a Formulario </a>
+            </div>
         <%
             }
             if( datos == null )
@@ -177,6 +189,11 @@
                 </tr>
             </table>
         </form>
+        <div class="container-fluid">    
+                <a href="jsp1.jsp">Ir a Numeros Aleatorios </a>
+                <br><br>
+                <a href="jsp2.jsp">Ir a Tabla de Datos </a>
+        </div>
         <%
             }
         %>
