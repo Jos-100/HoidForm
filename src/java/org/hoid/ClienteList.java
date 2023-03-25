@@ -44,6 +44,7 @@ public class ClienteList extends HttpServlet {
             out.println("<title>Servlet ClienteList</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<br><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTabla de Datos</h1><br>");
             out.println("<table border=\"1\">");
             out.println("<tr>");
             out.println("<td>Nombre</td>");
@@ -62,12 +63,13 @@ public class ClienteList extends HttpServlet {
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoP() ) );
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoM() ) );
                     out.println( String.format( "<td>%d</td>" , cliente.getEdad() ) );
-                    out.println( String.format( "<td></td>"  ) );
+                    out.println( String.format("<td><a href=\"#\">Borrar</a> <a href=\"#\">Editar</a></td>"  ) );
                     out.println("</tr>");
                 }
             }
             out.println("</table>");
-            out.println("<a href=\"AgregaCliente\">Nuevo cliente</a> ");
+            out.println("<br><br><a href=\"AgregaCliente\">Nuevo cliente</a> ");
+            out.println("<br><br><a href=\"http://localhost:8080/HoidForm\">Inicio</a> ");
             out.println("</body>");
             out.println("</html>");
         }

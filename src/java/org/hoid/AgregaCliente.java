@@ -45,6 +45,7 @@ public class AgregaCliente extends HttpServlet {
             if(accion != null && "Guardar".equals(accion) )
             {
                 guardaCliente( request );
+                redireccionar(out);
             }
             else
             {
@@ -158,5 +159,9 @@ public class AgregaCliente extends HttpServlet {
         {
             return  null;
         }
+    }
+    private void redireccionar( PrintWriter out ) {
+        out.print("<h3 style=\"margin-left: 20%; margin-top: 4%\">Registro exitoso</h3>");
+        out.print("<a href=\"ClienteList\" style=\"margin-left: 20%\">Ir a la lista</a>");
     }
 }
