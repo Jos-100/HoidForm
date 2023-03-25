@@ -121,7 +121,8 @@ public class AgregaCliente extends HttpServlet {
         out.println("<td colspan=\"2\"><input id=\"guardar\" name=\"guardar\" value=\"Guardar\"  type=\"submit\" /></td>");
         out.println("</tr>");
         out.println("</table>");
-        out.println("</form>");           
+        out.println("</form>");   
+        out.println("<a href=\"http://localhost:8080/HoidForm/ClienteList\">ABC Servlet</a>");
     }
 
     private void guardaCliente(HttpServletRequest request) 

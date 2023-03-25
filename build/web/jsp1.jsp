@@ -17,11 +17,23 @@
     </head>
     <body>
         <!-- TÍTULO -->
-        <div class="p-3 mb-2 bg-primary text-white">
-            <h1>Números aleatorios</h1>
+        <div class="p-3 mb-2 bg-success text-white">
+            <h1>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                Números aleatorios
+            </h1>
         </div> 
         <br>
-
+        <hr>
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" aria-current="page" href="jsp1.jsp">Números Aleatorios</a>
+            <a class="nav-link" href="jsp2.jsp">Tabla de Datos</a>
+            <a class="nav-link" href="jsp3.jsp">Formulario</a>
+            <a class="nav-link" href="ABC1.jsp" tabindex="-1" aria-disabled="true">Inicio</a>
+        </nav>
+        <hr>
+        <br><br>
         <!-- CONTENIDO -->
         <div class="container-fluid"> 
             <span class="border border-black">
@@ -71,17 +83,23 @@
             }
         %>
 
-        <br><br><br>
-        <div class="container-fluid">
-            <a href="jsp2.jsp" style="margin-left: 10%">Ir a Tabla de datos</a>
-            <br><br>
-            <a href="jsp3.jsp" style="margin-left: 10%">Ir a Formulario</a>
-            <br><br><br>
-        </div>
-        
-        <div class="container">
-            <a href="ABC1.jsp">Menu ABC Bootstrap</a>
-            <br><br>
+        <div class="container" style="margin-top: 4%; margin-left: 10%; margin-right: 10%">
+          
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="https://github.com/Jos-100">
+                        <img src= "imagenes/Git.png" width="121" height="121" class="img-fluid" alt="Logo">
+                    </a>
+                    <span class="mb-3 mb-md-0 text-muted">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        &copy; 2023 Hoid was here &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                </div>
+            
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="https://instagram.com/delarivajosue?igshid=NTdlMDg3MTY=">
+                        <img src= "imagenes/Ins.png" width="70" height="70" class="img-fluid" alt="Instagram">
+                </ul>
+            </footer>
         </div>
         
     </body>

@@ -17,27 +17,76 @@
     </head>
     <body>
         <div class="p-3 mb-2 bg-secondary text-white">
-            <h1>ABC Bootstrap y JSP</h1>
+            <h1>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                ABC Bootstrap y JSP
+            </h1>
         </div>
+        
         <br>
-        <div class="container">
-            <a href="jsp1.jsp">Ir a números aleatorios</a>
-            <br><br>
+        <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 2%">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Números Aleatorios</h5>
+                <a href="jsp1.jsp" class="btn btn-secondary">Ir</a>
+              </div>
+            </div>
+          </div>
+        </div>    
+            
+        <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 2%">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tabla de Datos</h5>
+                <a href="jsp2.jsp" class="btn btn-secondary">Ir</a>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="container">
-            <a href="jsp2.jsp">Ir a la Tabla de Datos</a>
-            <br><br>
+        <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 2%">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Formulario</h5>
+                <a href="jsp3.jsp" class="btn btn-secondary">Ir</a>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="container">
-            <a href="jsp3.jsp">Ir al formulario</a>
-            <br><br>
+        <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 2%">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Inicio</h5>
+                <a href="http://localhost:8080/HoidForm/" class="btn btn-secondary">Ir</a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="container">
-            <a href="index.html">Ir al Inicio</a>
-            <br><br>
+        <br><br><br>
+        <div class="container" style="margin-top: 4%; margin-left: 10%; margin-right: 10%">
+          
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="https://github.com/Jos-100">
+                        <img src= "imagenes/Git.png" width="121" height="121" class="img-fluid" alt="Logo">
+                    </a>
+                    <span class="mb-3 mb-md-0 text-muted">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp
+                        &copy; 2023 Hoid was here &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                </div>
+            
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="https://instagram.com/delarivajosue?igshid=NTdlMDg3MTY=">
+                        <img src= "imagenes/Ins.png" width="70" height="70" class="img-fluid" alt="Instagram">
+                </ul>
+            </footer>
         </div>
+       
     </body>
 </html>
