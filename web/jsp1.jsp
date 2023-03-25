@@ -73,9 +73,16 @@
 
         <br><br><br>
         <div class="container-fluid">
-        <a href="jsp2.jsp" style="margin-left: 10%">Ir a Tabla de datos</a>
-        <br><br>
-        <a href="jsp3.jsp" style="margin-left: 10%">Ir a Formulario</a>
+            <a href="jsp2.jsp" style="margin-left: 10%">Ir a Tabla de datos</a>
+            <br><br>
+            <a href="jsp3.jsp" style="margin-left: 10%">Ir a Formulario</a>
+            <br><br><br>
         </div>
+        
+        <div class="container">
+            <a href="ABC1.jsp">Menu ABC Bootstrap</a>
+            <br><br>
+        </div>
+        
     </body>
 </html>
