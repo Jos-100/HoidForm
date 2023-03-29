@@ -47,10 +47,15 @@ public class ClienteList extends HttpServlet {
             out.println("<br><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTabla de Datos</h1><br>");
             out.println("<table border=\"1\">");
             out.println("<tr>");
+            out.println("<td>Boleta</td>");
             out.println("<td>Nombre</td>");
             out.println("<td>Apellido Paterno</td>");
             out.println("<td>Apellido Materno</td>");
             out.println("<td>Edad</td>");
+            out.println("<td>Contraseña</td>");
+            out.println("<td>Calificación</td>");
+            out.println("<td>Correo</td>");
+            out.println("<td>Sexo</td>");
             out.println("<td>Acciones</td>");
             out.println("</tr>");
             clientes = (List<Cliente>) session.getAttribute("clientes" );
@@ -59,11 +64,16 @@ public class ClienteList extends HttpServlet {
                 for( Cliente cliente : clientes )
                 {
                     out.println("<tr>");
+                    out.println( String.format( "<td>%s</td>" , cliente.getBoleta()));
                     out.println( String.format( "<td>%s</td>" , cliente.getNombre() ) );
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoP() ) );
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoM() ) );
-                    out.println( String.format( "<td>%d</td>" , cliente.getEdad() ) );
-                    out.println( String.format("<td><a href=\"#\">Borrar</a> <a href=\"#\">Editar</a></td>"  ) );
+                    out.println( String.format( "<td>%s</td>" , cliente.getEdad() ) );
+                    out.println( String.format( "<td>%s</td>" , cliente.getContraseña() ) );
+                    out.println( String.format( "<td>%s</td>" , cliente.getCalificacion() ) );
+                    out.println( String.format( "<td>%s</td>" , cliente.getCorreo() ) );
+                    out.println( String.format( "<td>%s</td>" , cliente.getSexo() ) );
+                    out.println( String.format("<td><a href=\"EliminaCliente\">Borrar</a> <a href=\"ModificarCliente\">Editar</a></td>"  ) );
                     out.println("</tr>");
                 }
             }

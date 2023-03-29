@@ -6,9 +6,8 @@ package org.hoid;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author delar
  */
-public class AgregaCliente extends HttpServlet {
+@WebServlet(name = "EliminaCliente", urlPatterns = {"/EliminaCliente"})
+public class EliminaCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,29 +32,29 @@ public class AgregaCliente extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String accion = null;
-        try (PrintWriter out = response.getWriter()) 
-        {
+        try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AgregaCliente</title>");            
+            out.println("<title>Servlet EliminaCliente</title>");            
             out.println("</head>");
             out.println("<body>");
-            accion = request.getParameter("guardar" );
-            if(accion != null && "Guardar".equals(accion) )
+            accion = requestParameter("borrar");
+            if(accion != null && "Borrar".equals(accion))
             {
-                guardaCliente( request );
+                eliminaCliente((PrintWriter) request);
                 redireccionar(out);
             }
             else
             {
-                imprimirFormulario( out );
+                imprimirFormulario(out);
             }
             out.println("</body>");
             out.println("</html>");
         }
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -91,15 +91,12 @@ public class AgregaCliente extends HttpServlet {
      * @return a String containing servlet description
      */
     @Override
-    public String getServletInfo() 
-    {
+    public String getServletInfo() {
         return "Short description";
-    }
-
+    }// </editor-fold>
+    
     public void imprimirFormulario( PrintWriter out )
     {
-        
-        
         out.println("<form id=\"form1\">");
         out.println("<table border=\"1\">");
         out.println("<tr>");
@@ -145,51 +142,16 @@ public class AgregaCliente extends HttpServlet {
         out.println("</form>");   
         out.println("<br><a href=\"http://localhost:8080/HoidForm/ClienteList\">ABC Servlet</a>");
     }
-
-    private void guardaCliente(HttpServletRequest request) 
-    {
-        Cliente cliente = new Cliente( );
-        List<Cliente>list = null;
-        cliente.setBoleta(getCampoInteger(request.getParameter("boleta")));
-        cliente.setNombre(request.getParameter("nombre"));
-        cliente.setApellidoP(request.getParameter("apellidoP"));
-        cliente.setApellidoM(request.getParameter("apellidoM"));
-        cliente.setEdad(getCampoInteger(request.getParameter("edad")));
-        cliente.setContraseña(request.getParameter("contraseña"));
-        cliente.setCalificacion(getCampoInteger(request.getParameter("calificación")));
-        cliente.setCorreo(request.getParameter("correo"));
-        cliente.setSexo(request.getParameter("sexo"));
-        
-        if( cliente.getApellidoM( ) == null || cliente.getApellidoP() == null ||
-            cliente.getNombre() == null || cliente.getEdad() == null 
-            || cliente.getBoleta() == null || cliente.getContraseña() == null
-            || cliente.getSexo() == null || cliente.getCorreo() == null || cliente.getCalificacion() == null)
-        {
-            return;
-        }
-        list = (List<Cliente>) request.getSession().getAttribute("clientes");
-        if( list == null )
-        {
-            list = new ArrayList<>();
-            request.getSession().setAttribute("clientes", list);
-        }
-        list.add(cliente);
-        
-    }
-    
-    private Integer getCampoInteger( String parametro )
-    {
-        try
-        {
-            return Integer.valueOf(parametro);
-        }
-        catch(NumberFormatException ex)
-        {
-            return  null;
-        }
-    }
     private void redireccionar( PrintWriter out ) {
         out.print("<h3 style=\"margin-left: 20%; margin-top: 4%\">Registro exitoso</h3>");
         out.print("<a href=\"ClienteList\" style=\"margin-left: 20%\">Ir a la lista</a>");
     }
+
+    private String requestParameter(String borrar) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    private void eliminaCliente( PrintWriter out){
+    }
 }
+
